@@ -62,15 +62,17 @@ Each model was tested on unseen test data to ensure robust evaluation.
 
 # Model Performance Comparison:
 
-Model	                 Accuracy(%)	F1-score(%)	 Precision(%)	Recall(%)
-Logistic  Regression	  84.62	          83.00	         82.00	      85.00
-K-Nearest Neighbors	   89.41	          97.04	         96.38	      97.70
-Decision Tree	         91.63	          99.12	         99.03	      99.20
-Random Forest	         93.37	          99.39	         99.55	      99.23
-XGBoost	               93.26	          99.51	         99.49	      99.52
-LightGBM	              93.43	          99.51	         99.49	      99.52
-AdaBoost	              86.30	          86.00	         82.00	      85.00
-Logit (Hybrid Ensemble)93.44	          99.72	         99.60	      99.85
+| Model                       | Accuracy (%) | F1-score (%) | Precision (%) | Recall (%) |
+| --------------------------- | ------------ | ------------ | ------------- | ---------- |
+| Logistic Regression         | 84.62        | 83.00        | 82.00         | 85.00      |
+| K-Nearest Neighbors         | 89.41        | 97.04        | 96.38         | 97.70      |
+| Decision Tree               | 91.63        | 99.12        | 99.03         | 99.20      |
+| Random Forest               | 93.37        | 99.39        | 99.55         | 99.23      |
+| XGBoost                     | 93.26        | 99.51        | 99.49         | 99.52      |
+| LightGBM                    | 93.43        | 99.51        | 99.49         | 99.52      |
+| AdaBoost                    | 86.30        | 86.00        | 82.00         | 85.00      |
+| **Logit (Hybrid Ensemble)** | **93.44**    | **99.72**    | **99.60**     | **99.85**  |
+
 
  Hybrid Ensemble (Logit) performed the best overall, showing strong capability in identifying churn-prone customers.
 
