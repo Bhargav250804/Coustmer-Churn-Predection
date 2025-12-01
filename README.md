@@ -20,62 +20,90 @@ This repository contains a data science project aimed at predicting customer chu
 The dataset contains customer records including demographic information, account details, and service usage metrics. The target variable indicates whether a customer has churned (1) or not (0).
 
 
-## Workflow
+Customer Churn Prediction using Machine Learning
+This project focuses on predicting customer churn using multiple machine learning models and comparing their performance. The dataset contains customer demographic details and service usage behavior. The main objective is to identify customers likely to churn so that proactive retention strategies can be implemented.
 
-1. **Data Exploration & Cleaning**
-   - Load and inspect the data
-   - Handle missing values and outliers
-   - Encode categorical features
+📌 Project Overview
+Customer churn prediction is essential for businesses—especially telecom, banking, and subscription-based companies. By building accurate churn prediction models, organizations can reduce revenue loss and improve customer satisfaction.
 
-2. **Exploratory Data Analysis**
-   - Visualizations to understand feature distributions and correlations
-   - Insights into churn patterns
+This project implements several ML algorithms, applies proper preprocessing techniques, and compares performance metrics to determine the most effective model.
 
-3. **Feature Engineering**
-   - Creation of new predictive features
-   - Feature selection techniques
+🔍 Key Features of the Project
+Data preprocessing with dataset splitting and feature scaling
 
-4. **Model Building**
-   - Train-test split
-   - Model selection 
-   - Hyperparameter tuning
+Multiple ML algorithms implemented
 
-5. **Evaluation**
-   - Accuracy, precision, recall, F1-score, ROC-AUC
-   - Confusion matrix analysis
+Model performance comparison using Accuracy, Precision, Recall, and F1-score
 
-6. **Conclusion & Recommendations**
-   - Key findings
-   - Business recommendations to reduce churn
+Hybrid Logit Ensemble model for improved performance
 
-## Installation & Usage
+Ensures reproducibility with fixed random seed
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Bhargav250804/Coustmer-Churn-Predection.git
-   cd Coustmer-Churn-Predection
-   ```
+Visualization and evaluation included (if present in notebook)
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *(or manually install numpy, pandas, scikit-learn, matplotlib, seaborn, etc.)*
+📂 Dataset Processing
+1. Dataset Splitting
+For a dataset with 505,257 samples, and an 80-20 split:
 
-3. Launch Jupyter Notebook:
-   ```bash
-   jupyter notebook
-   ```
-   and open the main notebook file.
+ini
+Copy code
+ntrain = 505,257 × 0.8 = 404,205  
+ntest  = 505,257 × 0.2 = 101,052
+A fixed random seed ensures consistent results and avoids data leakage.
 
-## Results
+2. Feature Scaling
+Numerical features are standardized using:
+𝑋 scaled = 𝑋−𝜇/𝜎
 
-- (Summarize your main findings and model performance here.)
 
-## License
+This ensures:
+Faster model convergence
+Equal contribution of all features
+Improved performance in distance-based algorithms like KNN, SVM, and Logistic Regression
 
-(Add license information here if applicable.)
+Machine Learning Models Used
+The following models were trained and evaluated:
+Logistic Regression
+K-Nearest Neighbors (KNN)
+Decision Tree
+Random Forest
+XGBoost
+LightGBM
+AdaBoost
+Logit Hybrid Ensemble (custom ensemble)
 
----
+Each model was tested on unseen test data to ensure robust evaluation.
 
-For questions or suggestions, please open an issue or contact the repository owner.
+📊 Model Performance Comparison
+Model	                 Accuracy(%)	F1-score(%)	 Precision(%)	Recall(%)
+Logistic  Regression	  84.62	          83.00	         82.00	      85.00
+K-Nearest Neighbors	      89.41	          97.04	         96.38	      97.70
+Decision Tree	          91.63	          99.12	         99.03	      99.20
+Random Forest	          93.37	          99.39	         99.55	      99.23
+XGBoost	                  93.26	          99.51	         99.49	      99.52
+LightGBM	              93.43	          99.51	         99.49	      99.52
+AdaBoost	              86.30	          86.00	         82.00	      85.00
+Logit (Hybrid Ensemble)	  93.44	          99.72	         99.60	      99.85
+
+ Hybrid Ensemble (Logit) performed the best overall, showing strong capability in identifying churn-prone customers.
+
+ Technologies Used:
+Python
+NumPy, Pandas
+Scikit-learn
+XGBoost
+LightGBM
+Matplotlib / Seaborn 
+Jupyter Notebook
+
+#Conclusion
+This project demonstrates the importance of preprocessing and model comparison in churn prediction. Ensemble models—especially the Hybrid Logit model—outperform individual models and provide superior predictive accuracy.
+
+The workflow ensures:
+No data leakage
+Consistent reproducibility
+Strong model generalization
+
+The results show that advanced ensemble techniques can significantly enhance churn prediction accuracy.
+
+
