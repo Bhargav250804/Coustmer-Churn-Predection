@@ -1,7 +1,7 @@
 # Coustmer-Churn-Predection
 
 
-# Customer Churn Prediction
+
 
 ## Overview
 
@@ -19,12 +19,6 @@ This repository contains a data science project aimed at predicting customer chu
 
 The dataset contains customer records including demographic information, account details, and service usage metrics. The target variable indicates whether a customer has churned (1) or not (0).
 
-## Project Structure
-
-- `notebooks/` - Jupyter Notebooks for data analysis and modeling.
-- `data/` - Raw and processed datasets (not included for privacy).
-- `README.md` - Project documentation (this file).
-- (Add or update folders/files as appropriate.)
 
 ## Workflow
 
@@ -43,7 +37,7 @@ The dataset contains customer records including demographic information, account
 
 4. **Model Building**
    - Train-test split
-   - Model selection (e.g., Logistic Regression, Random Forest, XGBoost)
+   - Model selection 
    - Hyperparameter tuning
 
 5. **Evaluation**
